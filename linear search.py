@@ -5,6 +5,7 @@ for i in range(0,len(list)):
     if user==list[i]:
         print(f"Found at  index {i}") 
         found=True
+        break
         
 if found==False:
     print("not found")
