@@ -33,7 +33,7 @@ class Stack():
     def display(self):
         print(self.stack)
 
-object= Stack(3)
+"""object= Stack(3)
 
 object.push("a")
 object.display()
@@ -59,4 +59,4 @@ object.pop()
 object.display()
 
 object.pop()
-object.display()
+object.display()"""
