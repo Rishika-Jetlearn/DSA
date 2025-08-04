@@ -16,5 +16,6 @@ def check(expression):
     else:
         return False
 
+
 print(check("(1+3{6-7[2-1])}"))
 
