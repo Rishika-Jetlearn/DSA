@@ -21,4 +21,4 @@ def infix_to_postfix(expression):
     
     return result
 
-print(infix_to_postfix("a+b*c+d"))
+print(infix_to_postfix("a+b*c+d-f/s-a"))
