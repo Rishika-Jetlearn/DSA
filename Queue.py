@@ -27,12 +27,12 @@ class Queue():
         return len(self.queue)
     
     def is_empty(self):
-        if self.queue==0:
+        if len(self.queue)==0:
             return True
         else:
             return False
     
-a=Queue(3)
+"""a=Queue(3)
 a.enqueue(9)
 a.display()
 
@@ -59,4 +59,4 @@ a.dequeue()
 a.display()
 
 a.dequeue()
-a.display()
+a.display()"""

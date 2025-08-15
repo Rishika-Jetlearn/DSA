@@ -32,6 +32,12 @@ class Stack():
 
     def display(self):
         print(self.stack)
+    
+    def check_item(self,item):
+        if item in self.stack:
+            return True
+        else:
+            return False
 
 """object= Stack(3)
 

@@ -1,4 +1,5 @@
 import Queue
+import stackDS
 class Graph():
     def __init__(self,nodes):
         self.nodes=nodes
@@ -23,11 +24,25 @@ class Graph():
                     queue.enqueue(i)
                     visited.append(i)
         return visited
+    def dfs_traversal(self,start):
+        visited=[]
+        stack=stackDS.Stack(self.nodes)
+        stack.push(start)
+        while not stack.is_empty():
+            popped=stack.pop()
+            visited.append(popped)
+            for i in self.ad_list[popped]:
+                if i not in visited and not stack.check_item(i):
+                    stack.push(i)
+        return visited
 
 
-a=Graph(4)
+a=Graph(6)
 a.add_edge(0,1)
-a.add_edge(0,3)
+a.add_edge(0,2)
 a.add_edge(1,3)
+a.add_edge(1,4)
 a.add_edge(2,3)
-print(a.bfs_traversAL(0))
+a.add_edge(2,5)
+print(a.bfs_traversAL(4))
+print(a.dfs_traversal(4))
