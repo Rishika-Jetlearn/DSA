@@ -6,7 +6,7 @@ window.title("BST")
 window.config(background="#C2EBF5")
 
 
-def insert_node():
+"""def insert_node():
     value=Value_of_node.get()
     start=root.get()
     if start is None:
@@ -18,7 +18,7 @@ def insert_node():
     else:
         print("Right side")
         start.right_ch=insert_node(start.right_ch,value)
-    return start
+    return start"""
     
 #user input
 Value_of_node=Entry(window)
@@ -41,7 +41,7 @@ tree.grid(row=5,column=0)
 create=Button(window,text="Create node",bg="lightgreen",fg="black")
 create.grid(row=4,column=2,padx=50,pady=30)
 
-insert=Button(window,text="insert node",bg="lightgreen",fg="black",command=insert_node())
+insert=Button(window,text="insert node",bg="lightgreen",fg="black")
 insert.grid(row=3,column=2,padx=50,pady=30)
 
 search=Button(window,text="search node",bg="lightgreen",fg="black")
