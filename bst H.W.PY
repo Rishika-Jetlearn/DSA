@@ -33,7 +33,7 @@ def insert_node(start,value):
     
 
 def search_node(start):
-    item=Value_of_node.get()
+    item=int(Value_of_node.get())
 
     if item==start.key:
         result=True
@@ -52,6 +52,7 @@ def search_node(start):
 
 #trversals
 def inorder_tvrs(start):
+    tree.config(text="")
     print(start.key)
     if start.left_ch is not None:
         inorder_tvrs(start.left_ch)
@@ -64,7 +65,7 @@ def inorder_tvrs(start):
         inorder_tvrs(start.right_ch)
 
 def preorder_tvrs(start):
-    
+    tree.config(text="")
     result=tree.cget("text") + "," + str(start.key)
     print(result)
     tree.config(text=f"{result}")
@@ -78,7 +79,7 @@ def preorder_tvrs(start):
 
 
 def postorder_tvrs(start):
-
+    tree.config(text="")
     print(start.key)
     if start.left_ch is not None:
         postorder_tvrs(start.left_ch)
