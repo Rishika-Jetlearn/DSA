@@ -33,22 +33,27 @@ def insert_node(start,value):
     
 
 def search_node(start):
-    item=int(Value_of_node.get())
+    item = int(Value_of_node.get())
 
-    if item==start.key:
-        result=True
+    if item == start.key:
+        result = True
         tree.config(text="Item is root")
-    
-    elif item> start.key and start.right_ch is not None:
-        result=search_node(start.right_ch)
-        tree.config(text=f"{result}")
+        return result
 
-    elif item<start.key and start.left_ch is not None:
-        result=search_node(start.left_ch)
+    elif item > start.key and start.right_ch is not None:
+        result = search_node(start.right_ch)
         tree.config(text=f"{result}")
+        return result
+
+    elif item < start.key and start.left_ch is not None:
+        result = search_node(start.left_ch)
+        tree.config(text=f"{result}")
+        return result
+
     else:
-        result=False
+        result = False
         tree.config(text=f"{result}")
+        return result
 
 #trversals
 def inorder_tvrs(start):
